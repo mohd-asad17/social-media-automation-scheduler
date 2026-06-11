@@ -62,7 +62,7 @@ export const loginUser = async (
   
       const user = await User.findOne({ email });
       if (user && (await bcrypt.compare(password, user.password))) {
-        res.status(400).json({
+        res.status(201).json({
             _id: user.id,
             name: user.name,
             email: user.email,

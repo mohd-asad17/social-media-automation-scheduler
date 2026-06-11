@@ -16,7 +16,9 @@ export default defineConfig([
       reactRefresh.configs.vite,
     ],
     rules: {
-      "no-explicit-any": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-export-components": "off",
+      "no-unused-vars": "off"
     },
     languageOptions: {
       globals: globals.browser,

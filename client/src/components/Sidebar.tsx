@@ -1,6 +1,6 @@
 import { CalendarDaysIcon, LayoutDashboardIcon, LogOutIcon, UserIcon, Wand2Icon } from "lucide-react";
-import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Sidebar = ({
   isOpen,
@@ -10,19 +10,7 @@ const Sidebar = ({
   setIsOpen: (val: boolean) => void;
 }) => {
 
-  const [redirect , setRedirect] = useState(false);
-
-  useEffect(() => {
-    if(redirect) {
-      window.location.href ="/";
-    }
-  },[redirect])
-    const {logout , user} = {
-        logout: () => {
-            setRedirect(true);
-        },
-        user: {name: "John Doe", email: "johndoe@example.com"}
-    }
+    const {logout , user} = useAuth();
 
     const location = useLocation();
 
