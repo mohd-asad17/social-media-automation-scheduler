@@ -29,6 +29,13 @@ app.use('/api/accounts', accountRouter);
 app.use('/api/posts', postRouter);
 app.use('/api/activity', activityRouter);
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Server running"
+  });
+});
+
 // initialize Scheduler
 initScheduler();
 
