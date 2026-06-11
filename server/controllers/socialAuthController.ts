@@ -104,8 +104,13 @@ export const syncAccounts = async(req: AuthRequest, res: Response): Promise<void
                 user: req.user._id,
                 platform: normalizePlatform,
                 zernioAccountId: zid,
+                handle:
+  zAccount.displayName ||
+  zAccount.username ||
+  zAccount.handle ||
+  "Unknown",
                 status: "connected",
-                avatarUrl: zAccount.avatarUrl || zAccount.picture || zAccount.profile_image_url,
+                avatarUrl: zAccount.profilePicture || zAccount.avatarUrl || zAccount.picture || zAccount.profile_image_url,
             }, {
                 upsert: true, returnDocument: `after`
             })
