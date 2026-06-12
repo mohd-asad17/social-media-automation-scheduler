@@ -4,6 +4,13 @@
 
 ---
 
+## 🌍 Live Demo
+
+```text
+https://social-media-automation-scheduler.vercel.app
+```
+---
+
 ## ✨ Features
 
 ### 🤖 AI Content Generator
@@ -208,14 +215,6 @@ Features include:
 - JWT Authentication
 - Protected Routes
 - Persistent Sessions
-
----
-
-## 🌍 Live Demo
-
-```text
-https://social-media-automation-scheduler.vercel.app
-```
 
 ---
 
