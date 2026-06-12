@@ -14,7 +14,12 @@ const app = express();
 //Database connection
  await connectDB();
 
-app.use(cors());
+app.use(cors({
+ origin: [
+      "https://social-media-automation-scheduler.vercel.app/"
+    ],
+    credentials: true,
+}));
 app.use(express.json());
 
 const port = Number(process.env.PORT) || 3000;
