@@ -16,7 +16,7 @@ const app = express();
 
 app.use(cors({
  origin: [
-      "https://social-media-automation-scheduler.vercel.app/"
+      "https://social-media-automation-scheduler.vercel.app"
     ],
     credentials: true,
 }));
