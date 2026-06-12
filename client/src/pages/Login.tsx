@@ -24,8 +24,8 @@ export default function Login() {
 
             login(data, data.token);
             navigate('/dashboard');
-        } catch (error) {
-            toast.error(error.response?.data?.message || error?.message)
+        } catch (error: any) {
+            toast.error(error?.response?.data?.message || error.message)
         } finally {
             setLoading(false);
         }
