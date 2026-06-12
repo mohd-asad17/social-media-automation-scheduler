@@ -30,7 +30,7 @@ const AIComposer = () => {
    try {
     const {data} = await api.get("api/posts/generations");
     setGenerations(data);
-   } catch (error) {
+   } catch (error: any) {
     toast.error(error?.response?.data?.message || error.message);
    }
   };
